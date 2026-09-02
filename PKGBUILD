@@ -6,20 +6,21 @@
 
 pkgname='astah-professional'
 _pkgname=${pkgname//-/_}
-pkgver='10.1.0'
+pkgver='12.0.0'
 _pkgver=${pkgver//./_}
 pkgrel=1
-_pkgrel=9ceee1
+_pkgrel=4fa570
 pkgdesc='Full-Featured Software Modeling Tool for creating UML, ER Diagrams, DFD, Flowchart and more to create a clear understanding of your software design among teams.Easy-to-use UML2.x modeler'
 arch=('any')
 url="http://astah.net/products/astah-professional"
 conflicts=('astah_community' 'astah-uml')
 license=('custom')
-depends=('jre21-openjdk')
+depends=('jre25-openjdk')
+optdepends=('graphviz: PlantUML plugin diagram preview (set GRAPHVIZ_DOT=/usr/bin/dot if needed)')
 source=("https://cdn.change-vision.com/files/astah-professional_${pkgver}.${_pkgrel}-0_all.deb"
 	"LICENSE"
 	"PRIVACY")
-md5sums=('73fd8f692f3977d5721e9afc43a3f572'
+md5sums=('6a8af12cf76dd3e9796d8eeaa4bf1922'
          '4667d0dfa5bde4924e3cea64fb310e94'
          'd041a1336f18d00a99baa330b0e25fb9')
 install="astah-professional.install"
